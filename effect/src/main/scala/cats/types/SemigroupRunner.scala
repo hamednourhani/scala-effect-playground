@@ -18,20 +18,20 @@ object SemigroupRunner extends IOApp{
 
     val combinedMap = Semigroup[Map[String,Map[String,Int]]].combine(aMap,bMap)
 
-    combinedMap.get("foo") === Option(Map("bar" -> 11))
+//    combinedMap.get("foo") === Option(Map("bar" -> 11))
 
 
     val one: Option[Int] = Option(1)
     val two: Option[Int] = Option(2)
 
-    val n : Option[Int] = None
+//    val n : Option[Int] = None
 
-    (one |+| two) === Option(3)
-    (two |+| n) === None
+//    (one |+| two) === Option(3)
+//    (two |+| n) === None
 
-    (n |+| n) === None
+//    (n |+| n) === None
 
-    (two |+| n) === None
+//    (two |+| n) === None
 
     IO.pure(ExitCode.Success)
   }

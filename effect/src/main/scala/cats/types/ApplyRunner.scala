@@ -11,9 +11,9 @@ object ApplyRunner extends IOApp{
     val double : Int => Int = _ * 2
     val addTwo : Int => Int = _ + 2
 
-    Apply[Option].map(Some(1)(intToString))
-    Apply[Option].map(Some(1)(double))
-    Apply[Option].map(Some(1)(addTwo))
+    Apply[Option].map(Some(1))(intToString)
+    Apply[Option].map(Some(1))(double)
+    Apply[Option].map(Some(1))(addTwo)
 
     Apply[Option].ap(Some(intToString))(Some(1))
     Apply[Option].ap(Some(double))(Some(1))

@@ -23,10 +23,11 @@ object Dependencies {
 
   object ScalazZio {
     val org:        String = Scalaz.org
-    val zioVersion: String = "0.5.0"
+    val zioVersion: String = "1.0-RC4"
+    val zioInteropVersion : String = "0.5.0"
 
     val core:    ModuleID = org %% "scalaz-zio"         % zioVersion
-    val interop: ModuleID = org %% "scalaz-zio-interop" % zioVersion
+    val interop: ModuleID = org %% "scalaz-zio-interop" % zioInteropVersion
   }
 
 }

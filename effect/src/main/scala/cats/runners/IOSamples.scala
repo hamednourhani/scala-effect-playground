@@ -121,10 +121,10 @@ object IOSamples extends IOApp {
   }
 
 
-  def sleep(d:FiniteDuration)(implicit sc:ScheduledExecutorService): IO[Nothing] ={
+  def sleep(d:FiniteDuration)(implicit sc:ScheduledExecutorService): IO[Boolean] ={
     IO.cancelable{ cb =>
       val r = new Runnable {
-        override def run(): Unit = cb(Right(()))
+        override def run(): Unit = cb(Right(true))
       }
       val f = sc.schedule(r,d.length,d.unit)
 
